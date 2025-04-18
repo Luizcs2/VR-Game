@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://da3wkdlnjhmgh"]
+
+[ext_resource type="Script" uid="uid://cwa4a7tkgj2x4" path="res://books_&_ bookshelf_Luiz/books/luiz_book_2.gd" id="1_l3678"]
+[ext_resource type="Script" uid="uid://cg3fsmle8m3h8" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="2_76st7"]
+[ext_resource type="ArrayMesh" uid="uid://b51ec6v6cbi27" path="res://books_&_ bookshelf_Luiz/books/book3.obj" id="2_hedee"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hedee"]
+size = Vector2(0.55, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fyl8r"]
+margin = 0.1
+size = Vector3(0.21, 0.05, 0.3)
+
+[node name="t2hardcover_book" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 196615
+script = ExtResource("1_l3678")
+metadata/_custom_type_script = "uid://w1ls2sl6uh03"
+
+[node name="Hardcover_book" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.1, 0, -1.50996e-08, 0, 0.1, 0, 1.50996e-08, 0, -0.1, 0, 0, 0)
+mesh = ExtResource("2_hedee")
+skeleton = NodePath("")
+
+[node name="XRToolsGrabPointHand" type="Marker3D" parent="."]
+transform = Transform3D(1.37735, 0, 0, 0, 0.96499, 0, 0, 0, 1.54301, -0.0650489, 0.0508366, -0.0738102)
+script = ExtResource("2_76st7")
+metadata/_custom_type_script = "uid://cg3fsmle8m3h8"
+
+[node name="XRToolsGrabPointHand2" type="Marker3D" parent="."]
+transform = Transform3D(1.37735, 0, 0, 0, 0.96499, 0, 0, 0, 1.54301, 0.0540863, 0.0512513, -0.0703577)
+script = ExtResource("2_76st7")
+hand = 1
+metadata/_custom_type_script = "uid://cg3fsmle8m3h8"
+
+[node name="label_background_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.499971, 0, 0, 0, 3.40991, 0, 0, 0, 0.41255, -0.000182152, 0.0608358, 0.00405539)
+visible = false
+mesh = SubResource("PlaneMesh_hedee")
+
+[node name="label_title" type="Label3D" parent="."]
+transform = Transform3D(1.2076, 0, 0, 0, -0.0117143, 1.71414, 0, -0.845257, -0.023756, -0.130444, 0.0636022, -0.145964)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Title"
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_title_text" type="Label3D" parent="."]
+transform = Transform3D(0.680152, 0, 0, 0, -0.00609678, 1.26829, 0, -0.439919, -0.0175771, -0.116926, 0.0762424, -0.0758104)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.0562916, 0.0562916, 0.0562916, 1)
+text = "The Last Light in the Darkness"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 350.0
+
+[node name="label_summary" type="Label3D" parent="."]
+transform = Transform3D(0.583886, 0, 0, 0, -0.00494322, 1.08398, 0, -0.356683, -0.0150227, -0.119382, 0.0746266, -0.0138951)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Summary"
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_summary_text" type="Label3D" parent="."]
+transform = Transform3D(0.481907, 0, 0, 0, -0.00372941, 1.08398, 0, -0.269098, -0.0150227, -0.122359, 0.0678361, 0.0108986)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "The darkness spreads, and the last light that could hold it back is hidden away by those who dare to defy fate."
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+
+[node name="label_price" type="Label3D" parent="."]
+transform = Transform3D(0.600984, 0, 0, 0, -0.00697102, 0.81474, 0, -0.503001, -0.0112914, -0.120543, 0.0666295, 0.105288)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Price :"
+font_size = 50
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_price_text" type="Label3D" parent="."]
+transform = Transform3D(0.42293, 0, 0, 0, -0.00850444, 0.582812, 0, -0.613647, -0.00807711, -0.018704, 0.061111, 0.100114)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "20.99"
+font_size = 50
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_cover" type="Label3D" parent="."]
+transform = Transform3D(0.605051, -0.00879535, 0.00142369, -0.000508603, 0.00817457, 1.62799, -0.0036579, -1.45597, 0.00913173, -0.00352256, 0.0218148, 0.0162176)
+pixel_size = 0.001
+text = "The Last Light in the Darkness"
+autowrap_mode = 2
+width = 200.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.38666, 0, 0, 0, 1.63241, 0, 0, 0, 1.21318, -0.005, 0.0187963, 0)
+shape = SubResource("BoxShape3D_fyl8r")

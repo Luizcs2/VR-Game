@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dotb7tjaj345a"
+path="res://.godot/imported/book4.obj-2ee18420e2d60ebd86be1c5def7af38f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/book4.obj-2ee18420e2d60ebd86be1c5def7af38f.mesh"]
+
+source_file="res://books_&_ bookshelf_Luiz/books/book4.obj"
+dest_files=["res://.godot/imported/book4.obj-2ee18420e2d60ebd86be1c5def7af38f.mesh", "res://.godot/imported/book4.obj-2ee18420e2d60ebd86be1c5def7af38f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
