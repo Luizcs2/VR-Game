@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cce3135f5blff"]
-
-[ext_resource type="PackedScene" uid="uid://bhaqa6n6oyiv4" path="res://books_&_ bookshelf_Luiz/book4.tscn" id="1_lalpa"]
-
-[node name="book4" instance=ExtResource("1_lalpa")]
