@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://dybb8jh2ocsh3"]
+
+[ext_resource type="Script" uid="uid://cwogkejaesks0" path="res://node_3d.gd" id="1_anwjm"]
+[ext_resource type="Script" uid="uid://cg3fsmle8m3h8" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="6_irjvw"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0eaj8"]
+size = Vector2(0.55, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3sxhv"]
+margin = 0.1
+size = Vector3(0.21, 0.05, 0.3)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_anwjm")
+
+[node name="XRToolsGrabPointHand" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.075, 0)
+script = ExtResource("6_irjvw")
+metadata/_custom_type_script = "uid://cg3fsmle8m3h8"
+
+[node name="XRToolsGrabPointHand2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.075, 0)
+script = ExtResource("6_irjvw")
+hand = 1
+metadata/_custom_type_script = "uid://cg3fsmle8m3h8"
+
+[node name="label_background_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+visible = false
+mesh = SubResource("PlaneMesh_0eaj8")
+
+[node name="label_title" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0.105, -0.35)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Title"
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_title_text" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0.105, -0.3)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.0562916, 0.0562916, 0.0562916, 1)
+text = "My Default Book Title THIS IS A REALLY LONG BIT"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 350.0
+
+[node name="label_summary" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0.105, -0.15)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Summary"
+font_size = 40
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_summary_text" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0.105, -0.095)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "This is my example paragraph summary. This book is not yet finished, I'm just typing this to get an accurate gauge on how large this section should be and what my word limit is. It seems as if it's decently long. End now."
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+
+[node name="label_price" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0.105, 0.26)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "Price :"
+font_size = 50
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_price_text" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.08, 0.105, 0.26)
+visible = false
+pixel_size = 0.001
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+text = "$12345.67"
+font_size = 50
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+width = 400.0
+
+[node name="label_cover" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.06, 0)
+pixel_size = 0.001
+text = "My Default Title"
+autowrap_mode = 2
+width = 200.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 0.025, 0)
+shape = SubResource("BoxShape3D_3sxhv")

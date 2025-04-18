@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8mb3yisaumk4"]
+
+[ext_resource type="PackedScene" uid="uid://dw687tpgpy6ao" path="res://books_&_ bookshelf_Luiz/table.blend" id="1_i1vkw"]
+[ext_resource type="Script" uid="uid://dms1ui0v5kgqg" path="res://books_&_ bookshelf_Luiz/table.gd" id="2_i0wno"]
+[ext_resource type="PackedScene" uid="uid://c6pdt1hmrrk5f" path="res://books_&_ bookshelf_Luiz/books/luiz_book_1.tscn" id="4_0qqfw"]
+[ext_resource type="PackedScene" uid="uid://da3wkdlnjhmgh" path="res://books_&_ bookshelf_Luiz/books/luiz_book_2.tscn" id="6_7knrw"]
+[ext_resource type="PackedScene" uid="uid://cf3y3jvrq3hqu" path="res://books_&_ bookshelf_Luiz/books/luiz_book_3.tscn" id="8_rheyw"]
+[ext_resource type="PackedScene" uid="uid://cy7slfqybs3s1" path="res://books_&_ bookshelf_Luiz/books/luiz_book_4.tscn" id="10_6pxc0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pns0j"]
+size = Vector3(1, 1.36475, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1vkw"]
+size = Vector3(0.03, 1.8, 1.2)
+
+[node name="table2" instance=ExtResource("1_i1vkw")]
+script = ExtResource("2_i0wno")
+
+[node name="table" parent="." index="0"]
+layers = 13
+
+[node name="StaticBody3D" type="StaticBody3D" parent="table" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table/StaticBody3D" index="0"]
+transform = Transform3D(1.81878, 0, 0, 0, 1.12511, 0, 0, 0, 1.38694, 0, 0.0180886, 0.0514244)
+shape = SubResource("BoxShape3D_pns0j")
+
+[node name="Backing2" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(-2.04401e-07, 0, 0.212193, 0, 0.716212, 0, -4.67615, 0, -9.27524e-09, 0.792, 0, -0.655)
+shape = SubResource("BoxShape3D_i1vkw")
+
+[node name="Backing3" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(3.66265e-15, 4.03669e-08, 1.61445, 1.91693, -4.03669e-08, 0, 8.37917e-08, 0.923488, -7.05698e-08, 0.00290779, 0.649307, 0.00838173)
+shape = SubResource("BoxShape3D_i1vkw")
+
+[node name="Backing4" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(-0.0697337, -0.000628912, 0.212169, 0.10514, 0.716031, 0.000257421, -4.67445, 0.0161147, -0.00315936, -0.802, 0, -0.675)
+shape = SubResource("BoxShape3D_i1vkw")
+
+[node name="Backing5" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(-2.04401e-07, 0, 0.212193, 0, 0.716212, 0, -4.67615, 0, -9.27524e-09, 0.802, 0, 0.645)
+shape = SubResource("BoxShape3D_i1vkw")
+
+[node name="Backing6" type="CollisionShape3D" parent="." index="5"]
+transform = Transform3D(-2.04401e-07, 0, 0.212193, 0, 0.716212, 0, -4.67616, 0, -9.27524e-09, -0.792, 0, 0.664)
+shape = SubResource("BoxShape3D_i1vkw")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.059317, 0)
+
+[node name="hardcover_book" parent="RigidBody3D" index="0" instance=ExtResource("4_0qqfw")]
+transform = Transform3D(1.4615, 0.0396085, 1.37363, -0.0394216, 1.5635, -0.0322783, -1.38224, -0.00271122, 1.45331, -0.587273, 0.8863, -0.453525)
+collision_layer = 12
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="." index="7"]
+
+[node name="hardcover_book2" parent="RigidBody3D2" index="0" instance=ExtResource("6_7knrw")]
+transform = Transform3D(1.55189, 0, -0.821247, 0, 1.241, 0, 0.698881, 0, 1.82361, -0.496855, 0.956432, 0.282911)
+collision_layer = 12
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." index="8"]
+
+[node name="hardcover_book" parent="RigidBody3D3" index="0" instance=ExtResource("8_rheyw")]
+transform = Transform3D(-1.2807, 0, 1.52915, 0, 0.88, 0, -1.51921, 0, -1.28907, 0.274764, 0.895664, 0.381827)
+collision_layer = 12
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." index="9"]
+
+[node name="hardcover_book3" parent="RigidBody3D4" index="0" instance=ExtResource("10_6pxc0")]
+transform = Transform3D(-3.14374, 0, -1.03734, 0, 2.817, 0, 1.90714, 0, -1.70995, 0.634506, 1.00293, -0.505354)
+collision_layer = 255
+collision_mask = 196863
