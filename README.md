@@ -1,10 +1,10 @@
 # VR Game
 
-Install git, godot and blender.
+Install Godot.
 
 Clone the repo with the following cmd command:
 ```
-git clone git@gitlab.cs.nuim.ie:u200317/cs423_project.git
+git clone https://github.com/Luizcs2/VR-Game.git
 ```
 
 ## Running project
